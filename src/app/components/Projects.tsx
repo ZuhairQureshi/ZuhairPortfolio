@@ -33,7 +33,7 @@ const projects: Project[] = [
     id: 3,
     title: 'WANKI',
     description: 'A fully functional flashcard application scripted exclusively in Bash, a text-based alternative to the popular flashcard app Anki.',
-    image: 'https://cdn.creazilla.com/cliparts/7794451/flashcards-clipart-xl.png',
+    image: 'https://speak-and-play-english.com/wp-content/uploads/2018/07/classroom-objects-free-ESL-Flashcards-and-Printable-Picture-Cards-for-Classroom-.jpg',
     tags: ['Bash', 'CI/CD'],
     github: 'https://github.com/ZuhairQureshi/Wanki',
   },
