@@ -1,0 +1,131 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.photoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.photoWrapper {
+  position: relative;
+}
+
+.photoGlow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0.2;
+}
+
+.photo {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 8px solid white;
+}
+
+.textContent {
+  /* No additional styles needed for motion wrapper */
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.title {
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.description {
+  color: #475569;
+  margin-bottom: 2rem;
+  max-width: 512px;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.socialLink.github {
+  background-color: #0f172a;
+  color: white;
+}
+
+.socialLink.github:hover {
+  background-color: #1e293b;
+}
+
+.socialLink.linkedin {
+  background-color: #2563eb;
+  color: white;
+}
+
+.socialLink.linkedin:hover {
+  background-color: #1d4ed8;
+}
+
+.socialLink.email {
+  background-color: #9333ea;
+  color: white;
+}
+
+.socialLink.email:hover {
+  background-color: #7e22ce;
+}

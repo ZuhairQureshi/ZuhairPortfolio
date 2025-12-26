@@ -1,0 +1,39 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #eff6ff 100%);
+}
+
+.main {
+  position: relative;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.projectsSection,
+.skillsSection,
+.contactSection {
+  min-height: auto;
+  padding: 5rem 0;
+}
+
+.footer {
+  background-color: #0f172a;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footerContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.footerText {
+  color: #94a3b8;
+  margin: 0;
+}
