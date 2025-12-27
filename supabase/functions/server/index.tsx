@@ -47,49 +47,6 @@ app.post("/make-server-c03c20df/contact", async (c) => {
       timestamp: new Date().toISOString(),
     });
 
-    // Send email notification via SendGrid if API key is configured
-    try {
-      const SENDGRID_API_KEY = Deno.env.get("SENDGRID_API_KEY");
-      const SENDGRID_FROM = Deno.env.get("SENDGRID_FROM") || "no-reply@yourdomain.com";
-      const SENDGRID_TO = Deno.env.get("SENDGRID_TO") || "zuhair.q01@gmail.com";
-
-      if (SENDGRID_API_KEY) {
-        const emailPayload = {
-          personalizations: [
-            {
-              to: [{ email: SENDGRID_TO }],
-              subject: `[Portfolio Contact] ${subject}`,
-            },
-          ],
-          from: { email: SENDGRID_FROM, name: "Portfolio Contact" },
-          content: [
-            {
-              type: "text/plain",
-              value: `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}\n\nID: ${contactId}\nTimestamp: ${new Date().toISOString()}`,
-            },
-          ],
-        };
-
-        const resp = await fetch("https://api.sendgrid.com/v3/mail/send", {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${SENDGRID_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(emailPayload),
-        });
-
-        if (!resp.ok) {
-          console.error("SendGrid response error:", await resp.text());
-        } else {
-          console.log("SendGrid email sent for contact:", contactId);
-        }
-      } else {
-        console.log("SENDGRID_API_KEY not configured; skipping email send.");
-      }
-    } catch (emailError) {
-      console.error("Error sending contact email:", emailError);
-    }
     console.log(`Contact form submission stored: ${contactId} from ${email}`);
 
     return c.json({ 

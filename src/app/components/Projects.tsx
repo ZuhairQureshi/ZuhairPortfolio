@@ -74,7 +74,7 @@ const projects: Project[] = [
     title: 'Resuscitron',
     description: 'A design for an automated cardiopulmonary resuscitation device with adjustable depth settings to facilitate use on children. ',
     image: 'images/project/resuscitronDiagram.png',
-    tags: ['Python', 'OpenWeather API', 'Leaflet'],
+    tags: ['Python', 'Raspberry Pi'],
     demo: '#',
   },
 ];

@@ -74,6 +74,7 @@
   font-size: 1rem;
   transition: all 0.3s;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .input:focus {
@@ -91,6 +92,7 @@
   transition: all 0.3s;
   resize: none;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .textarea:focus {
