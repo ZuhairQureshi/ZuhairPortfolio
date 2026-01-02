@@ -19,7 +19,7 @@ const projects: Project[] = [
     description: 'A full-stack deepfake detection platform utilizing a fusion of deep learning algorithms to identify manipulated media content.',
     image: 'https://s24806.pcdn.co/wp-content/uploads/2024/07/TrendMicro-Deepfake-videostill2-970-copy.jpg',
     tags: ['Python', 'PyTorch', 'Flask'],
-    github: 'https://github.com/zuhairqureshi',
+    github: 'https://github.com/McMasterAI-Society/DeepFakeDetector',
   },
   {
     id: 2,
